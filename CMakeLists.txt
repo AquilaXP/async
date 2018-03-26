@@ -8,6 +8,8 @@ configure_file(version.h.in version.h @ONLY)
 
 set(SRC
     async.cpp
+    service.cpp
+    SubjectRawData.cpp
     bulkmt/IState.cpp
     bulkmt/ISubject.cpp
     )
