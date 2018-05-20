@@ -25,6 +25,9 @@ public:
     /// Помещает в очередь на обработку
     void Receive( async::handle_t h, const char* data, size_t size );
 
+    /// Заставляем сбросить данные
+    void Flush( async::handle_t h );
+
     /// Помещает в очередь на удаление
     void Disconnect( async::handle_t h );
 

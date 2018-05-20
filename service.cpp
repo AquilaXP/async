@@ -53,6 +53,16 @@ void service::Receive( async::handle_t h, const char* data, size_t size )
         p->PushData( msg );
     } );
 }
+
+void service::Flush( async::handle_t h )
+{
+    m_queue_commands.push( [this, h]()
+    {
+        auto p = reinterpret_cast<SubjectRawData*>( h );
+        p->Flush();
+    } );
+}
+
 void service::Disconnect( async::handle_t h )
 {
     m_queue_commands.push( [this, h]()

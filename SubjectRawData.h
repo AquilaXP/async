@@ -11,6 +11,7 @@ public:
     SubjectRawData( size_t size );
     ~SubjectRawData();
 
+    void Flush();
     void PushData( const std::string& msg );
 private:
     void Update();

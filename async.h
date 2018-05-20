@@ -36,6 +36,8 @@ DLL_PUBLIC handle_t connect( std::size_t bulk );
 
 DLL_PUBLIC void receive( handle_t handle, const char *data, std::size_t size );
 
+DLL_PUBLIC void flush( handle_t handle );
+
 DLL_PUBLIC void disconnect( handle_t handle );
 
 }

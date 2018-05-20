@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 
-SubjectRawData::SubjectRawData( size_t size ) 
+SubjectRawData::SubjectRawData( size_t size )
     : m_ac( this, size )
 {
 }
@@ -24,6 +24,12 @@ SubjectRawData::~SubjectRawData()
     catch( const std::exception& )
     {
     }
+}
+
+
+void SubjectRawData::Flush()
+{
+    m_ac.Flush();
 }
 
 void SubjectRawData::PushData( const std::string& msg )
